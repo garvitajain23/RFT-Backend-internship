@@ -49,7 +49,7 @@ day2/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/rftinternship.git
+git clone https://github.com/garvitajain23/rftinternship.git
 ```
 
 Navigate to the project directory:
@@ -95,9 +95,9 @@ Gained hands-on experience with real-world backend logic
 
 🔗 Connect with Me
 
-💼 LinkedIn: https://linkedin.com/in/YOUR_PROFILE
+💼 LinkedIn: www.linkedin.com/in/garvita-jain-02678a2ba
 
-💻 GitHub: https://github.com/YOUR_USERNAME
+💻 GitHub: https://github.com/garvitajain23
 
 ⭐ Acknowledgment
 This project is part of the GOW AI Academy Backend Internship Program.

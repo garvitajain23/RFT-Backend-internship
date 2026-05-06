@@ -7,7 +7,7 @@ app.use(express.json());
 
 // Health check endpoint
 app.get("/health", (req, res) => {
-  res.status(200).json({ status: "UP", service: "user-service" });
+  res.status(200).json({ status: "UP", service: "user-service", port: 4001 });
 });
 
 app.use("/users", userRoutes);

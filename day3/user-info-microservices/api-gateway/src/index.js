@@ -1,41 +1,45 @@
 require("dotenv").config();
 const express = require("express");
-const { createProxyMiddleware } = require("http-proxy-middleware");
+const axios = require("axios");
 
 const app = express();
 app.use(express.json());
 
-const USER_SERVICE = process.env.USER_SERVICE_URL;
+const USER_SERVICE = process.env.USER_SERVICE_URL || "http://localhost:4001";
 
-// ─── Route Table ───────────────────────────────────────
-//  /users  →  user-service (port 4001)
-// ───────────────────────────────────────────────────────
+// GET /users → get all users
+app.get("/users", async (req, res) => {
+  try {
+    const response = await axios.get(`${USER_SERVICE}/users`);
+    res.status(200).json(response.data);
+  } catch (err) {
+    res.status(502).json({
+      success: false,
+      error: "User Service unavailable",
+    });
+  }
+});
 
-app.use(
-  "/users",
-  createProxyMiddleware({
-    target: USER_SERVICE,
-    changeOrigin: true,
-    on: {
-      error: (err, req, res) => {
-        res.status(502).json({
-          success: false,
-          error: "User Service unavailable",
-          details: err.message,
-        });
-      },
-    },
-  }),
-);
+// GET /users/:id → get specific user
+app.get("/users/:id", async (req, res) => {
+  try {
+    const response = await axios.get(`${USER_SERVICE}/users/${req.params.id}`);
+    res.status(200).json(response.data);
+  } catch (err) {
+    res.status(err.response?.status || 502).json({
+      success: false,
+      error: err.response?.data?.error || "User not found",
+    });
+  }
+});
 
 // Gateway health check
 app.get("/health", (req, res) => {
-  res.json({
+  res.status(200).json({
     status: "UP",
     service: "api-gateway",
-    routes: {
-      users: USER_SERVICE,
-    },
+    PORT: 8000,
+    userService: USER_SERVICE,
   });
 });
 
@@ -44,7 +48,8 @@ app.use((req, res) => {
   res.status(404).json({ success: false, error: "Route not found" });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`🚪 API Gateway running on http://localhost:${PORT}`);
+  console.log(`   /users → ${USER_SERVICE}`);
 });

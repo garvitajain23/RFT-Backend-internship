@@ -62,7 +62,7 @@ notes-api/
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/garvitajain23RNAME/R.git
+git clone https://github.com/garvitajain23/RFT-internship.git
 cd notes-api
 ```
 

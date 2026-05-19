@@ -1,7 +1,7 @@
-# 📘 Day 2 - Blog System with Users
+# 📘 Day 12 - Blog System with Users
 
 This project is part of my **Backend Development Internship**.  
-In Day 2, I built a **Blog System** that supports users and posts with proper relationships.
+In Day 12, I built a **Blog System** that supports users and posts with proper relationships.
 
 ---
 
@@ -54,7 +54,7 @@ git clone https://github.com/garvitajain23/rftinternship.git
 
 Navigate to the project directory:
 
-cd rftinternship/day2/blog-system
+cd rftinternship/day12/blog-system
 
 Install dependencies:
 
@@ -86,12 +86,6 @@ Learned to structure scalable backend projects
 Practiced building REST APIs
 
 Gained hands-on experience with real-world backend logic
-
-📅 Internship Progress
-
-✅ Day 1: Full Authentication System with JWT
-
-✅ Day 2: Blog System with Users
 
 🔗 Connect with Me
 

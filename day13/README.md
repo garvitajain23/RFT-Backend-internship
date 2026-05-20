@@ -1,10 +1,10 @@
-# 📅 Day 1 - Authentication System
+# 📅 Day 13 - Authentication System
 
 ## 🚀 Overview
 
 This project is part of my backend internship journey.
 
-On Day 1, I worked on building the foundation of an authentication system.
+On Day 13, I worked on building the foundation of an authentication system.
 
 ---
 
@@ -14,10 +14,6 @@ On Day 1, I worked on building the foundation of an authentication system.
 - Initialized backend server
 - Implemented basic authentication logic
 - Learned how routing and middleware work
-
----
-
-## 📂 Folder Structure
 
 ---
 

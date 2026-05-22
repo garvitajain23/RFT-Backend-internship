@@ -102,7 +102,7 @@ search-api/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/search-api.git
+git clone https://github.com/garvitajain23/search-api.git
 cd search-api
 ```
 

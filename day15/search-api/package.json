@@ -1,0 +1,27 @@
+{
+  "name": "search-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:gateway": "nodemon gateway/index.js",
+    "start:products": "nodemon services/products/index.js",
+    "start:users": "nodemon services/users/index.js",
+    "start:posts": "nodemon services/posts/index.js",
+    "dev": "concurrently \"npm run start:gateway\" \"npm run start:products\" \"npm run start:users\" \"npm run start:posts\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.16.1",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.21.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.14"
+  }
+}

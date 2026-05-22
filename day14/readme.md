@@ -84,7 +84,7 @@ inventory-management/
 ### 1. Clone & Install
 
 ```bash
-git clone <>
+git clone <"https://github.com/garvitajain23/RFT-internship">
 cd inventory-management
 npm install
 ```

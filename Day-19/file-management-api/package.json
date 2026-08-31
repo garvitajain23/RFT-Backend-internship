@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "dev": "concurrently \"nodemon api-gateway/index.js\" \"nodemon services/upload-service/index.js\" \"nodemon services/file-service/index.js\" \"nodemon services/metadata-service/index.js\"",
+    "dev:gateway": "nodemon api-gateway/index.js",
+    "dev:upload": "nodemon services/upload-service/index.js",
+    "dev:file": "nodemon services/file-service/index.js",
+    "dev:metadata": "nodemon services/metadata-service/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.16.1",
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-http-proxy": "^2.1.2",
+    "http-proxy-middleware": "^4.0.0",
+    "mongoose": "^9.6.3",
+    "multer": "^2.1.1",
+    "nodemon": "^3.1.14",
+    "uuid": "^14.0.0"
+  }
+}

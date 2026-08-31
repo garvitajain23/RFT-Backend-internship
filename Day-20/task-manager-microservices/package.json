@@ -1,0 +1,24 @@
+{ "scripts": {
+    "dev:gateway": "nodemon gateway/server.js",
+    "dev:auth":    "nodemon services/auth-service/server.js",
+    "dev:task":    "nodemon services/task-service/server.js",
+    "dev:user":    "nodemon services/user-service/server.js",
+    "start:all":   "concurrently \"npm run dev:gateway\" \"npm run dev:auth\" \"npm run dev:task\" \"npm run dev:user\""
+  },
+  "dependencies": {
+    "axios": "^1.16.1",
+    "bcryptjs": "^3.0.3",
+    "concurrently": "^10.0.0",
+    "cors": "^2.8.6",
+    "crs": "^0.0.01",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2",
+    "express-validator": "^7.3.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.6.3",
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.14",
+    "winston": "^3.19.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "notification-service-api",
+  "version": "1.0.0",
+  "description": "Microservices-based Notification Engine",
+  "main": "user-service/user.server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run user\" \"npm run notification\" \"npm run push\"",
+    "user": "nodemon user-service/user.server.js",
+    "notification": "nodemon notification-core-service/notification.server.js",
+    "push": "nodemon push-service/push.server.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
+  }
+}

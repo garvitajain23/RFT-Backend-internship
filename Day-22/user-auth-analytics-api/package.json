@@ -1,0 +1,32 @@
+{
+  "name": "user-auth-analytics-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "auth": "nodemon --watch auth-service --watch .env auth-service/src/server.js",
+    "user": "nodemon --watch user-service --watch .env user-service/src/server.js",
+    "analytics": "nodemon --watch analytics-service --watch .env analytics-service/src/server.js",
+    "gateway": "nodemon --watch api-gateway --watch .env api-gateway/src/server.js",
+    "dev": "concurrently -n AUTH,USER,ANALYTICS,GATEWAY -c blue,green,yellow,magenta \"npm run auth\" \"npm run user\" \"npm run analytics\" \"npm run gateway\""
+  
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.19.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "http-proxy-middleware": "^4.2.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.9.3"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "nodemon": "^3.1.14"
+  }
+}

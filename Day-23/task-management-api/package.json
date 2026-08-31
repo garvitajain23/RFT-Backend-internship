@@ -1,0 +1,31 @@
+{
+  "name": "task-management-api",
+  "version": "1.0.0",
+  "description": "Task Management REST API - Microservice + MVC",
+  "main": "gateway/index.js",
+  "scripts": {
+    "start:gateway": "nodemon gateway/index.js",
+    "start:auth": "nodemon --watch services/auth-service --watch shared --watch config services/auth-service/index.js",
+    "start:task": "nodemon --watch services/task-service --watch shared --watch config services/task-service/index.js",
+    "start:notification": "nodemon --watch services/notification-service --watch shared --watch config services/notification-service/index.js",
+    "dev": "concurrently \"npm run start:gateway\" \"npm run start:auth\" \"npm run start:task\" \"npm run start:notification\""
+  },
+  "dependencies": {
+    "axios": "^1.19.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.2.0",
+    "http-proxy-middleware": "^3.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.14",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.14"
+  }
+}

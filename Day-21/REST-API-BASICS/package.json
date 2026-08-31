@@ -1,0 +1,25 @@
+{
+  "name": "rest-api-basics",
+  "version": "1.0.0",
+  "type":"module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:student": "node student-service/server.js",
+    "start:gateway": "node api-gateway/server.js",
+    "start": "concurrently \"npm:start:student\" \"npm:start:gateway\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.9.3"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}

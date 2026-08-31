@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Manager</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; }
+  input { margin: 4px; padding: 6px; }
+  li { margin: 8px 0; }
+  button { margin-left: 8px; cursor: pointer; }
+</style>
+</head>
+<body>
+  <h1>🎓 Student Manager</h1>
+
+  <input id="name" placeholder="Name">
+  <input id="course" placeholder="Course">
+  <button onclick="addStudent()">Add Student</button>
+
+  <ul id="studentList"></ul>
+
+  <script>
+    const API_URL = "http://localhost:5000/students";
+
+    async function loadStudents() {
+      const res = await fetch(API_URL);
+      const students = await res.json();
+      const list = document.getElementById("studentList");
+      list.innerHTML = "";
+      students.forEach(s => {
+        const li = document.createElement("li");
+        li.innerHTML = `${s.name} — ${s.course}
+          <button onclick="deleteStudent('${s._id}')">Delete</button>`;
+        list.appendChild(li);
+      });
+    }
+
+    async function addStudent() {
+      const name = document.getElementById("name").value;
+      const course = document.getElementById("course").value;
+      if (!name || !course) return alert("Fill both fields");
+
+      await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, course })
+      });
+
+      document.getElementById("name").value = "";
+      document.getElementById("course").value = "";
+      loadStudents();
+    }
+
+    async function deleteStudent(id) {
+      await fetch(`${API_URL}/${id}`, { method: "DELETE" });
+      loadStudents();
+    }
+
+    loadStudents();
+  </script>
+</body>
+</html>

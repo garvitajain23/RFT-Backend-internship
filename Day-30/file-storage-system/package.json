@@ -1,0 +1,32 @@
+{
+  "name": "file-storage-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "start:gateway": "node api-gateway/index.js",
+    "start:auth": "node auth-service/src/server.js",
+    "start:file": "node file-service/src/server.js",
+    "dev:gateway": "nodemon api-gateway/index.js",
+    "dev:auth": "nodemon auth-service/src/server.js",
+    "dev:file": "nodemon file-service/src/server.js",
+    "dev": "concurrently -n GATEWAY,AUTH,FILE -c cyan,green,yellow \"npm:dev:gateway\" \"npm:dev:auth\" \"npm:dev:file\"",
+    "start": "concurrently -n GATEWAY,AUTH,FILE -c cyan,green,yellow \"npm:start:gateway\" \"npm:start:auth\" \"npm:start:file\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "concurrently": "^10.0.5",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "http-proxy-middleware": "^4.2.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.9.4",
+    "multer": "^2.3.0",
+    "nodemon": "^3.1.14"
+  }
+}

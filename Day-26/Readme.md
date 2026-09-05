@@ -178,7 +178,7 @@ PUT http://localhost:5000/api/users/66b1a2b3c4d5e6f7a8b9c0d1/preferences
 ---
 
 ## 👨‍💻 Author
-**Aman Sharma**
+**Garvita jain**
 Built as part of the **Day 26 Backend Internship Challenge** — Notification Service API using MERN + Microservices + MVC.
 
 ---

@@ -99,7 +99,7 @@ task-manager-microservices/
 
 ```bash
 # Clone the repo
-git clone https://github.com/Aman-Sharma-0007/RFT-INTERNSHIP/tree/main/Day-20.git
+git clone https://github.com/garvitajain23/RFT-Backend-internship/tree/main/Day-20.git
 
 # Move into project folder
 cd task-manager-microservices
@@ -284,7 +284,7 @@ GET http://localhost:3003/health
 
 # 👨‍💻 Author
 
-**Aman Sharma**  
+**GARVITA JAIN**  
 GOW AI Academy RFT Backend Internship
 
 - Day 20 — Final Capstone Project

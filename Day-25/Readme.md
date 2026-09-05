@@ -84,7 +84,7 @@ url-shortener/
 
 ### 1. Clone the repository
 
-    git clone https://github.com/Aman-Sharma-0007/RFT-INTERNSHIP/tree/main/Day-25
+    git clone https://github.com/garvitajain23/RFT-Backend-internship/tree/main/Day-25
     cd url-shortener
 
 ### 2. Install dependencies
@@ -228,4 +228,4 @@ All shorten & redirect requests are rate-limited to 100 requests per 15-minute w
 
 ## 🙋 Author
 
-Built by Aman Sharma — Day 25 of Backend Internship at RFT  Journey.
+Built by Garvita Jain — Day 25 of Backend Internship at RFT  Journey.

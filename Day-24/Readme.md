@@ -165,6 +165,6 @@ Centralized error handling is implemented via `errorHandler.js`, and all control
 
 ## Author
 
-Aman Sharma
+GARVITA JAIN
 
 Built as part of  Day 24 RFT Backend Internship.

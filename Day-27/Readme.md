@@ -202,7 +202,7 @@ npm run beneficiary
 
 ## 👨‍💻 Author
 
-**Aman Sharma**
+**garvita jain**
 Built as part of the **Day 27 Backend Internship Challenge** — Digital Wallet API using MERN + Microservices + MVC.
 
 ---

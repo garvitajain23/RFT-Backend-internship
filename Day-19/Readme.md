@@ -72,7 +72,7 @@ file-management-api/
 ### 1. Clone the repository
 
 ```bash
-git clone git clone https://github.com/Aman-Sharma-0007/RFT-INTERNSHIP/tree/main/Day-18.git
+git clone git clone https://github.com/garvitajain23/RFT-Backend-internship/tree/main/Day-18.git
 cd file-management-api
 ```
 

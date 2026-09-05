@@ -193,9 +193,9 @@ GET /health
 ---
 
 ## Author
-**Aman Sharma**
+**garvita jain**
 
 
--Gmail: amanshonak16@gmail.com
+-Gmail: garvitajain.in@gmail.com
 
 `#rftInternship` 
